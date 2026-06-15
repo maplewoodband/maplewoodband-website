@@ -30,6 +30,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link href="/guide" onClick={() => setMenuOpen(false)}>
+                What is a Ceilidh?
+              </Link>
+            </li>
+            <li>
               <Link href="/videos" onClick={() => setMenuOpen(false)}>
                 Videos
               </Link>
