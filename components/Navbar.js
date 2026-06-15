@@ -35,6 +35,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link href="/faq" onClick={() => setMenuOpen(false)}>
+                FAQ
+              </Link>
+            </li>
+            <li>
               <Link href="/videos" onClick={() => setMenuOpen(false)}>
                 Videos
               </Link>
