@@ -1,16 +1,27 @@
-// pages/music.js
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 
 const Music = () => {
-    return (
-      <div>
+  return (
+    <div>
+      <SEO
+        title="Music"
+        description="Listen to Maplewood Ceilidh Band — a selection of our folk and ceilidh tunes on SoundCloud."
+      />
       <Navbar />
-      <div class="page-title">Music</div>
-        <div class="page-content">
-		    <p><iframe width="780" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&#038;url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F15607052&#038;show_artwork=true&#038;maxwidth=780&#038;maxheight=1000&#038;dnt=1"></iframe></p>
-	      </div>
+      <div className="page-title">Music</div>
+      <div className="page-content">
+        <div className="responsive-iframe-container">
+          <iframe
+            title="Maplewood music player"
+            scrolling="no"
+            frameBorder="no"
+            src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F15607052&show_artwork=true&maxwidth=780&maxheight=1000&dnt=1"
+          />
+        </div>
       </div>
-    );
-  };
-  
-  export default Music;
+    </div>
+  );
+};
+
+export default Music;

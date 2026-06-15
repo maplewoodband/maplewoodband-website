@@ -1,13 +1,16 @@
 const Footer = () => (
-<div class="footer">
-    <div class="soundcloud">
-        <aside id="wp_soundpress_plugin-2" class="widget widget_wp_soundpress_plugin">
-            <iframe width="100%" scrolling="no" height="auto" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/maplewood/liberty-gasp-reel-reel&amp;show_user=true&amp;visual=true">
-
-            </iframe>
-        </aside>
+  <div className="footer">
+    <div className="soundcloud">
+      <iframe
+        title="Maplewood featured track"
+        width="100%"
+        scrolling="no"
+        height="166"
+        frameBorder="no"
+        src="https://w.soundcloud.com/player/?url=https://soundcloud.com/maplewood/liberty-gasp-reel-reel&show_user=true&visual=false"
+      />
     </div>
-</div>
+  </div>
 );
 
 export default Footer;

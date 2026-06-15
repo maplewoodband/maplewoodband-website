@@ -1,17 +1,19 @@
+/* ============================================================
+   Base nav styles (desktop-first)
+   ============================================================ */
 nav {
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     color: white;
     font-family: Cabin, Helvetica, sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     line-height: 35px;
-    /* margin-top: 30px;
-    margin-bottom: 30px; */
     padding-top: 15px;
     padding-bottom: 15px;
-    margin:0 auto;
-    
+    margin: 0 auto;
+    position: relative;
 }
+
 nav a {
     color: white;
     padding-top: 13px;
@@ -25,11 +27,13 @@ nav a::after {
     color: gray;
 }
 
-
 nav ul {
     text-align: center;
-
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 nav li {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -37,23 +41,54 @@ nav li {
     display: inline;
     text-align: center;
 }
+
+/* ============================================================
+   Hamburger button (hidden on desktop)
+   ============================================================ */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 16px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-hamburger-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* ============================================================
+   Body & layout
+   ============================================================ */
 body {
     background-repeat: no-repeat;
     background-image: url('../assets/images/background.png');
     background-size: cover;
     background-attachment: fixed;
-    height:100%;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-  }
-  .maplewood-banner-container {
+    height: 100%;
+    margin: 0;
+}
+
+.maplewood-banner-container {
     padding-top: 155px;
     padding-bottom: 155px;
-  }
-  .maplewood-banner {
-    background-color: rgba(0,0,0,0.3);
+}
+
+.maplewood-banner {
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -61,15 +96,10 @@ body {
     font-family: Cabin, Helvetica, sans-serif;
     font-size: 40px;
     width: fit-content;
-    text-align: center;
-    margin:auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    
+    margin: auto;
+    padding: 15px;
 }
+
 .page-title {
     color: white;
     text-transform: uppercase;
@@ -77,67 +107,161 @@ body {
     font-family: Cabin, Helvetica, sans-serif;
     font-size: 40px;
     width: fit-content;
-    text-align: center;
-    margin:auto;
-    margin-bottom: 32px;
-    
+    margin: auto auto 32px;
 }
+
 .main-text {
-    background-color: rgba(0,0,0,0.86);
+    background-color: rgba(0, 0, 0, 0.86);
     width: 80%;
-    margin: 0 auto; /* Centers the page */
+    max-width: 900px;
+    margin: 0 auto 70px;
     color: white;
     font-family: Cabin, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 32px;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    margin-bottom: 70px;
+    padding: 36px;
 }
+
+.main-text a {
+    color: #87ceeb;
+}
+
 .page-content {
     width: 80%;
-    margin: auto; /* Centers the page */
+    max-width: 900px;
+    margin: auto auto 70px;
     color: white;
     line-height: 32px;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 72px;
-    padding-bottom: 72px;
-    margin-bottom: 132px;
-    /* font-family: Cabin, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 32px;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 72px;
-    padding-bottom: 72px;
-    margin-bottom: 132px; */
+    padding: 36px;
 }
+
 .main-text h2 {
     font-family: Alegreya, Georgia, serif;
     font-size: 32px;
     line-height: 32px;
 }
 
-iframe {
-    margin: auto;
-    display: block;
-    margin-top: 70px;
+/* ============================================================
+   Responsive iframes
+   ============================================================ */
+.responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 32px;
 }
 
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+
+/* SoundCloud player on music page is taller than 16:9 */
+.responsive-iframe-container.soundcloud-player {
+    padding-bottom: 75%;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
 .footer {
-    background-color: rgba(0,0,0,0.86);
+    background-color: rgba(0, 0, 0, 0.86);
 }
 
 .soundcloud {
-    width: 200px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
     margin: auto;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 36px;
+    padding-bottom: 36px;
 }
-/* bg-image {
-    background-image: url();
-} */
+
+/* ============================================================
+   Mobile — max-width: 768px
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Fix iOS Safari background-attachment:fixed bug */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* Show hamburger, hide inline nav list */
+    .nav-hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    nav ul.nav-open {
+        display: flex;
+    }
+
+    nav li {
+        display: block;
+        padding: 12px 0;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    /* Reduce hero banner padding */
+    .maplewood-banner-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Scale down large headings */
+    .maplewood-banner,
+    .page-title {
+        font-size: 26px;
+    }
+
+    .main-text,
+    .page-content {
+        width: 92%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .main-text h2 {
+        font-size: 24px;
+    }
+}
+
+/* ============================================================
+   Mobile — max-width: 480px
+   ============================================================ */
+@media (max-width: 480px) {
+    .maplewood-banner,
+    .page-title {
+        font-size: 22px;
+    }
+
+    .main-text,
+    .page-content {
+        width: 96%;
+        padding: 16px;
+    }
+}

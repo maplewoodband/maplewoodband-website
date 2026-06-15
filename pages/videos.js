@@ -1,20 +1,44 @@
-// pages/music.js
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 
 const Videos = () => {
-    return (
-      <div>
+  return (
+    <div>
+      <SEO
+        title="Videos"
+        description="Watch Maplewood Ceilidh Band in action — videos from ceilidhs and folk dance events."
+      />
       <Navbar />
-      <div class="page-title">Videos</div>
-        <div class="page-content">
-		      <p>
-            <iframe  id="_ytid_89710"  width="780" height="439"  data-origwidth="780" data-origheight="439" src="https://www.youtube.com/embed/wHg2uafnxFU?enablejsapi=1&autoplay=0&cc_load_policy=0&cc_lang_pref=&iv_load_policy=1&loop=0&modestbranding=0&rel=1&fs=1&playsinline=0&autohide=2&theme=dark&color=red&controls=1&" class="__youtube_prefs__  no-lazyload" title="YouTube player"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-no-lazy="1" data-skipgform_ajax_framebjll=""></iframe>
-            <iframe  id="_ytid_29118"  width="780" height="439"  data-origwidth="780" data-origheight="439" src="https://www.youtube.com/embed/9eh-IZlDeLw?enablejsapi=1&autoplay=0&cc_load_policy=0&cc_lang_pref=&iv_load_policy=1&loop=0&modestbranding=0&rel=1&fs=1&playsinline=0&autohide=2&theme=dark&color=red&controls=1&" class="__youtube_prefs__  no-lazyload" title="YouTube player"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-no-lazy="1" data-skipgform_ajax_framebjll=""></iframe>
-            <iframe width="780" height="439" src="https://www.youtube.com/embed/CCj42RMx4iI?si=5cvrTTIXEL_tagCb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </p>
+      <div className="page-title">Videos</div>
+      <div className="page-content">
+        <div className="responsive-iframe-container">
+          <iframe
+            title="Maplewood Ceilidh Band video 1"
+            src="https://www.youtube.com/embed/wHg2uafnxFU?enablejsapi=1&autoplay=0&iv_load_policy=1&loop=0&rel=1&fs=1&playsinline=0&controls=1"
+            allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div className="responsive-iframe-container">
+          <iframe
+            title="Maplewood Ceilidh Band video 2"
+            src="https://www.youtube.com/embed/9eh-IZlDeLw?enablejsapi=1&autoplay=0&iv_load_policy=1&loop=0&rel=1&fs=1&playsinline=0&controls=1"
+            allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div className="responsive-iframe-container">
+          <iframe
+            title="Maplewood Ceilidh Band video 3"
+            src="https://www.youtube.com/embed/CCj42RMx4iI?si=5cvrTTIXEL_tagCb"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
-    );
-  };
-  
-  export default Videos;
+    </div>
+  );
+};
+
+export default Videos;
