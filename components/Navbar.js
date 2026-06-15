@@ -40,6 +40,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link href="/locations" onClick={() => setMenuOpen(false)}>
+                Areas
+              </Link>
+            </li>
+            <li>
               <Link href="/feedback" onClick={() => setMenuOpen(false)}>
                 Feedback
               </Link>
